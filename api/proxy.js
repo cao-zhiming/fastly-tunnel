@@ -1,16 +1,8 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
-	server.on('request',(req,res)=>{
-		const url = req.url  //获取请求的地址
-		const parsedUrl = new URL(url);
-
-// 获取参数
-const searchParams = parsedUrl.searchParams;
-const Param = searchParams.get('query');
-	})
 
 module.exports = (req, res) => {
-  let target = Param;//your website url
+  let target = req.params.query;//your website url
   //   if (
   //     req.url.startsWith("/api") ||
   //     req.url.startsWith("/auth") ||
