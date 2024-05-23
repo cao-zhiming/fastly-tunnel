@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/api/proxy"
+  status = 200
