@@ -1,7 +1,7 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
 module.exports = (req, res) => {
-  let target = ""; // 初始化目标URL为空字符串
+  let target = ""; 
 
   // 检查是否存在query参数
   if (req.query.target) {
